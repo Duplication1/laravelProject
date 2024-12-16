@@ -26,7 +26,7 @@
                 <div class="col flex flex-col justify-center items-center">
                     <h1 class="text-7xl font-bold text-green-700">Welcome</h1>
                     <h2 class="text-2xl opacity-90 text-green-700 mb-10">We sell fruits and meats!</h2>
-                    <a href="#" class="text-green-700 bg-green-300 py-3 px-5 border-2 border-solid border-green-700 rounded-lg mb-20 hover:bg-green-700 hover:text-green-300">Go to Store <i class="fa-solid fa-store"></i></a>
+                    <a href="{{ route('store') }}" class="text-green-700 bg-green-300 py-3 px-5 border-2 border-solid border-green-700 rounded-lg mb-20 hover:bg-green-700 hover:text-green-300">Go to Store <i class="fa-solid fa-store"></i></a>
 
                     <div class="text-green-700 mt-5 flex flex-col gap-2">
                     <h1 class="text-2xl font-medium">Contact Us:</h1>
