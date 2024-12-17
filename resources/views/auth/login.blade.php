@@ -3,7 +3,7 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <form method="POST" action="{{ route('login') }}" class="bg-green-300">
+    <form method="POST" action="{{ route('login') }}" class="bg-green-300 my-20 m-auto lg:w-96 md:w-96 p-10 rounded-lg">
         @csrf
 
         <!-- Email Address -->
@@ -15,7 +15,7 @@
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
+            <x-input-label for="password" :value="__('Password')"/>
 
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
@@ -27,9 +27,9 @@
 
         <!-- Remember Me -->
         <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
+            <label for="remember_me" class="inline-flex items-center ">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                <span class="ms-2 text-sm ">{{ __('Remember me') }}</span>
             </label>
         </div>
 
@@ -40,9 +40,9 @@
                 </a>
             @endif
 
-            <x-primary-button class="ms-3">
+            <button class="ms-3 bg-green-700 px-7 py-2 text-green-300 rounded-lg hover:bg-green-300 hover:text-green-700 hover:border-green-700 hover:border-2 border-2 border-green-700">
                 {{ __('Log in') }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
 </x-guest-layout>

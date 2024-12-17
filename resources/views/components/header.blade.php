@@ -1,10 +1,12 @@
 <header class="grid grid-cols-2 items-center gap-2 py-4 lg:grid-cols-3 bg-green-200 h-25">
     <div class="ml-5 flex lg:justify-center lg:col-start-2">
+        <a class="h-3/6 w-3/6"
+                    href="{{ url('/') }}">
         <?xml version="1.0" standalone="no"?>
         <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
          "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-         width="300px" height="100px" viewBox="0 0 2000.000000 848.000000"
+         width="100%" height="100%" viewBox="0 0 2000.000000 848.000000"
          preserveAspectRatio="xMidYMid meet">
         
         <g transform="translate(0.000000,848.000000) scale(0.100000,-0.100000)"
@@ -246,10 +248,10 @@
         -29 -5 -29 37 0 78 111 57 156 -14 31 -65 34 -81 4z"/>
         </g>
         </svg>
-        
+    </a>
     </div>
     @if (Route::has('login'))
-        <nav class=" flex flex-1 justify-center gap-2 mr-4">
+        <nav class=" flex flex-1 justify-center gap-2 mr-4 mx-auto">
             @auth
                 <a
                     href="{{ url('/dashboard') }}"
@@ -258,6 +260,7 @@
                     Dashboard
                 </a>
             @else
+                
                 <a
                     href="{{ route('login') }}"
                     class="rounded-md px-3 py-2 border-solid border-2 bg-green-300 border-green-700 !important text-green-700 hover:bg-green-700 hover:text-green-300"
