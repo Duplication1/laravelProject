@@ -14,8 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="h-dvh bg-cover bg-center bg-no-repeat bg-[url('../views/components/images/fruit-bg.svg')]">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -31,6 +30,6 @@
             <main>
                 {{ $slot }}
             </main>
-        </div>
+
     </body>
 </html>

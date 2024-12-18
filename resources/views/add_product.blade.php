@@ -1,9 +1,4 @@
-
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Add Product') }}
-        </h2>
-    </x-slot>
+<x-app-layout>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -35,3 +30,4 @@
                         <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
                             Add Product
                         </button>
+                    </x-app-layout>
