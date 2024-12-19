@@ -1,3 +1,4 @@
+<!-- filepath: /c:/xampp/htdocs/dashboard/laravel_project/resources/views/layouts/app.blade.php -->
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -13,23 +14,25 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
     </head>
     <body class="h-dvh bg-cover bg-center bg-no-repeat bg-[url('../views/components/images/fruit-bg.svg')]">
-            @include('layouts.navigation')
+        @include('layouts.navigation')
 
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
+        <!-- Page Heading -->
+        @isset($header)
+            <header class="bg-white shadow">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endisset
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+        <!-- Page Content -->
+        <main>
+            {{ $slot }}
+        </main>
 
+        @stack('scripts')
     </body>
 </html>

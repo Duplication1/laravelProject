@@ -15,10 +15,12 @@
                     <x-nav-link :href="Auth::check() && Auth::user()->is_admin === 1 ? route('admin.dashboard') : route('dashboard')" :active="request()->routeIs('dashboard') || request()->routeIs('admin.dashboard')">
                         Dashboard
                     </x-nav-link>
-                
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
+                        View Products
+                    </x-nav-link>
                     @if(Auth::check() && Auth::user()->is_admin === 1)
                         <x-nav-link :href="route('products.create')" :active="request()->routeIs('products.create')">
-                            Products
+                           Add  Products
                         </x-nav-link>
                     @endif
                 </div>

@@ -22,6 +22,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/add-product', [ProductController::class, 'create'])->name('products.create');
     Route::post('/add-product', [ProductController::class, 'store'])->name('products.store');
+    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 });
 
 
@@ -30,3 +31,5 @@ require __DIR__.'/auth.php';
 
 
 Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard')->middleware(['auth', 'admin']);
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
